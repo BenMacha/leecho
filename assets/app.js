@@ -25,6 +25,8 @@ $('body').ready(function(){
     $('.simple-table').bootstrapTable({
         pagination: true,
         search: true,
+        pageSize: 10,
+        pageList:[10, 25, 50],
         sortable: true
     })
 
