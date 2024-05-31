@@ -45,7 +45,8 @@ yarn dev
 yarn watch
 ```
 
-6. BONUS PHP CS
+
+BONUS PHP CS
 ```shell
 composer phpcsfixer
 ```
