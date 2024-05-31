@@ -5,7 +5,10 @@
 {% block body %}
     <h1>Tag index</h1>
 
-    <table class="table">
+
+    <a href="{{ path('app_tag_new') }}">Create new</a>
+
+    <table class="table simple-table">
         <thead>
             <tr>
                 <th>Id</th>
@@ -34,6 +37,4 @@
         {% endfor %}
         </tbody>
     </table>
-
-    <a href="{{ path('app_tag_new') }}">Create new</a>
 {% endblock %}

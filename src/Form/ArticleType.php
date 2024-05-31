@@ -17,7 +17,11 @@ class ArticleType extends AbstractType
     {
         $builder
             ->add('title')
-            ->add('slug')
+            ->add('slug', TextType::class, array(
+                'attr' => array(
+                    'readonly' => true,
+                ),
+            ))
             ->add('content')
             ->add('author', EntityType::class, [
                 'class' => Author::class,
