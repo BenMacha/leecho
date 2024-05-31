@@ -1,0 +1,1 @@
+{"base_url":"","routes":{"app_article_index":{"tokens":[["text","\/article\/"]],"defaults":[],"requirements":[],"hosttokens":[],"methods":["GET","POST"],"schemes":[]}},"prefix":"","host":"localhost","port":"","scheme":"http","locale":""}

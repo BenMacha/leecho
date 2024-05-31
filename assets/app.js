@@ -6,6 +6,10 @@
  */
 import 'jquery/src/jquery';
 import 'bootstrap-table/src/bootstrap-table';
+const routes = require('../public/js/fos_js_routes.json');
+import Routing from '../vendor/friendsofsymfony/jsrouting-bundle/Resources/public/js/router.min.js';
+Routing.setRoutingData(routes);
+
 
 // any CSS you import will output into a single css file (app.css in this case)
 import './styles/app.scss';
