@@ -17,6 +17,7 @@ docker compose exec php sh
 
 ```shell
 composer install
+php bin/console assets:install --symlink public
 ```
 
 3. install database
@@ -28,4 +29,11 @@ php bin/console doctrine:fixtures:load
 4. start project
 ```shell
 symfony server:start -d
+```
+
+5. run webpack
+```shell
+yarn
+yarn dev
+yarn watch
 ```
