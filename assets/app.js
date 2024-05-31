@@ -4,6 +4,33 @@
  * We recommend including the built version of this JavaScript file
  * (and its CSS file) in your base layout (base.html.twig).
  */
+import 'jquery/src/jquery';
+import 'bootstrap-table/src/bootstrap-table';
 
 // any CSS you import will output into a single css file (app.css in this case)
 import './styles/app.scss';
+
+
+function slugify(str) {
+    str = str.replace(/^\s+|\s+$/g, ''); // trim leading/trailing white space
+    str = str.toLowerCase(); // convert string to lowercase
+    str = str.replace(/[^a-z0-9 -]/g, '') // remove any non-alphanumeric characters
+        .replace(/\s+/g, '-') // replace spaces with hyphens
+        .replace(/-+/g, '-'); // remove consecutive hyphens
+    return str;
+} // FROM INTERNET
+
+$('body').ready(function(){
+
+    $('.simple-table').bootstrapTable({
+        pagination: true,
+        search: true,
+        sortable: true
+    })
+
+    $(document).on('change', '#article_title', function(){
+        let values = $(this).val();
+        $('#article_slug').val(slugify(values))
+    });
+
+});

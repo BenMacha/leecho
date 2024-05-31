@@ -1623,6 +1623,11 @@ boolbase@^1.0.0:
   resolved "https://registry.yarnpkg.com/boolbase/-/boolbase-1.0.0.tgz#68dff5fbe60c51eb37725ea9e3ed310dcc1e776e"
   integrity sha512-JZOSA7Mo9sNGB8+UjSgzdLtokWAky1zbztM3WRLCbZ70/3cTANmQmOdR7y2g+J0e2WXywy1yS468tY+IruqEww==
 
+bootstrap-table@^1.22.6:
+  version "1.22.6"
+  resolved "https://registry.yarnpkg.com/bootstrap-table/-/bootstrap-table-1.22.6.tgz#b24a6e43337a9fa00d0e8f078b03bb49cf63ed1c"
+  integrity sha512-thyvL2B1J0rkRtHgfEAOiHZGXsGbxyd+uBPX/5JEB+RE+6Efu2+T67sd8I5kxdXkkoGAAPEsHH7iRI3iT8GkJg==
+
 bootstrap@^5.3.3:
   version "5.3.3"
   resolved "https://registry.yarnpkg.com/bootstrap/-/bootstrap-5.3.3.tgz#de35e1a765c897ac940021900fcbb831602bac38"
