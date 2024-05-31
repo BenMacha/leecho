@@ -1,20 +1,21 @@
 <?php
 
 /**
- * PHP version 7.4 & Symfony 4.4.
+ * PHP version 8.2 & Symfony 6.4.
  * LICENSE: This source file is subject to version 3.01 of the PHP license
  * that is available through the world-wide-web at the following URI:
  * https://www.php.net/license/3_01.txt.
  *
- * Foodomarket Test  developed by Ben Macha.
+ * developed by Ben Macha.
  *
- * @category   Symfony Project
+ * @category   Symfony Project Les Echos
  *
  * @author     Ali BEN MECHA       <contact@benmacha.tn>
  *
- * @copyright  Ⓒ 2024 FoodoMarket
+ * @copyright  Ⓒ 2024 benmacha.tn
  *
  * @see       https://www.benmacha.tn
+ *
  *
  */
 

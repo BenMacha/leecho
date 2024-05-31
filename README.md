@@ -44,3 +44,8 @@ yarn
 yarn dev
 yarn watch
 ```
+
+6. BONUS PHP CS
+```shell
+composer phpcsfixer
+```

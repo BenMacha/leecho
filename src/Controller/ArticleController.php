@@ -1,5 +1,24 @@
 <?php
 
+/**
+ * PHP version 8.2 & Symfony 6.4.
+ * LICENSE: This source file is subject to version 3.01 of the PHP license
+ * that is available through the world-wide-web at the following URI:
+ * https://www.php.net/license/3_01.txt.
+ *
+ * developed by Ben Macha.
+ *
+ * @category   Symfony Project Les Echos
+ *
+ * @author     Ali BEN MECHA       <contact@benmacha.tn>
+ *
+ * @copyright  Ⓒ 2024 benmacha.tn
+ *
+ * @see       https://www.benmacha.tn
+ *
+ *
+ */
+
 namespace App\Controller;
 
 use App\Entity\Article;
@@ -7,7 +26,6 @@ use App\Form\ArticleType;
 use App\Repository\ArticleRepository;
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
-use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Attribute\Route;
@@ -15,15 +33,15 @@ use Symfony\Component\Routing\Attribute\Route;
 #[Route('/article')]
 class ArticleController extends AbstractController
 {
-    #[Route('/', name: 'app_article_index', methods: ['GET', 'POST'], options: ['expose' => true] )]
+    #[Route('/', name: 'app_article_index', methods: ['GET', 'POST'], options: ['expose' => true])]
     public function index(Request $request, ArticleRepository $articleRepository): Response
     {
         if ($request->isXmlHttpRequest()) {
-
             $rResult = $articleRepository->load($request->query->all());
 
             return $this->json($rResult);
         }
+
         return $this->render('article/index.html.twig', [
             'articles' => $articleRepository->findAll(),
         ]);
@@ -78,7 +96,7 @@ class ArticleController extends AbstractController
     #[Route('/{id}', name: 'app_article_delete', methods: ['POST'])]
     public function delete(Request $request, Article $article, EntityManagerInterface $entityManager): Response
     {
-        if ($this->isCsrfTokenValid('delete'.$article->getId(), $request->getPayload()->get('_token'))) {
+        if ($this->isCsrfTokenValid('delete' . $article->getId(), $request->getPayload()->get('_token'))) {
             $entityManager->remove($article);
             $entityManager->flush();
         }
