@@ -5,8 +5,10 @@
 {% block body %}
     <h1>Article index</h1>
 
-    <table class="table">
-        <thead>
+    <a href="{{ path('app_article_new') }}">Create new</a>
+
+    <table class="table article-table">
+        <!--<thead>
             <tr>
                 <th>Id</th>
                 <th>Title</th>
@@ -16,9 +18,9 @@
                 <th>UpdatedAt</th>
                 <th>actions</th>
             </tr>
-        </thead>
+        </thead>-->
         <tbody>
-        {% for article in articles %}
+        {#{  for article in articles }}
             <tr>
                 <td>{{ article.id }}</td>
                 <td>{{ article.title }}</td>
@@ -35,9 +37,7 @@
             <tr>
                 <td colspan="7">no records found</td>
             </tr>
-        {% endfor %}
+        {% endfor %#}
         </tbody>
     </table>
-
-    <a href="{{ path('app_article_new') }}">Create new</a>
 {% endblock %}

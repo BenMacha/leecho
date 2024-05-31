@@ -26,12 +26,19 @@ php bin/console doctrine:migrations:migrate
 php bin/console doctrine:fixtures:load
 ```
 
-4. start project
+
+4. install assets
+```shell
+php bin/console assets:install --symlink public
+php bin/console fos:js-routing:dump --format=json --target=public/js/fos_js_routes.json
+```
+
+5. start project
 ```shell
 symfony server:start -d
 ```
 
-5. run webpack
+6. run webpack
 ```shell
 yarn
 yarn dev
