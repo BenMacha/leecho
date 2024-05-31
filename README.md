@@ -24,3 +24,8 @@ composer install
 php bin/console doctrine:migrations:migrate
 php bin/console doctrine:fixtures:load
 ```
+
+4. start project
+```shell
+symfony server:start -d
+```
