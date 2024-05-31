@@ -14,19 +14,7 @@ class TagType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options): void
     {
         $builder
-            ->add('name')
-            ->add('createdAt', null, [
-                'widget' => 'single_text',
-            ])
-            ->add('updatedAt', null, [
-                'widget' => 'single_text',
-            ])
-            ->add('articles', EntityType::class, [
-                'class' => Article::class,
-                'choice_label' => 'id',
-                'multiple' => true,
-            ])
-        ;
+            ->add('name');
     }
 
     public function configureOptions(OptionsResolver $resolver): void
